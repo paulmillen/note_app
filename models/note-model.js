@@ -1,3 +1,5 @@
+"use strict";
+
 (function(exports) {
   function Note(message) {
     this.text = message;

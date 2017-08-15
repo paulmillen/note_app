@@ -1,6 +1,8 @@
+"use strict";
+
 (function(exports) {
   function List() {
-    this.ARRAY = []
+    this.ARRAY = [];
     this.items = this.ARRAY;
   };
   List.prototype.getItems = function() {

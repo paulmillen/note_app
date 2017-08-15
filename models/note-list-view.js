@@ -1,3 +1,5 @@
+"use strict";
+
 (function(exports) {
   function View(list) {
     this.listToView = list;
@@ -8,7 +10,7 @@
         .getItems()
         .forEach(function(note) { returnArray.push(note.text) });
     return returnArray;
-  };
+  };  
   View.prototype.listHtml = function() {
     return "<ul><li><div>" + this._listTextArray().join("</div></li><li><div>") + "</div></li></ul>";
   }
