@@ -7,3 +7,17 @@
   };
   exports.testNoteText = testNoteText();
 })(this);
+
+(function(exports) {
+  function testNoteId() {
+    var description = "Notes have serialized ID's"
+    var note_1 = new Note();
+    var note_2 = new Note();
+    var note_3 = new Note();
+    assert.isTrue(note_1.getId() === -4);
+    assert.isTrue(note_2.getId() === -3);
+    assert.isTrue(note_3.getId() === -2);
+    testFeedback(description);
+  };
+  exports.testNoteId = testNoteId();
+})(this);

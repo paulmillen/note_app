@@ -8,7 +8,9 @@
     var returnArray = [];
     this.listToView
         .getItems()
-        .forEach(function(note) { returnArray.push(note.getText()) });
+        .forEach(function(note) {
+          returnArray.push(note.getText().substring(0,20))
+        });
     return returnArray;
   };
   View.prototype.listHtml = function() {
