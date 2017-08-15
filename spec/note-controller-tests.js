@@ -20,6 +20,7 @@
     controller.Html();
     assert.isTrue(document.getElementById("app").innerHTML === "<ul><li><div>Test Message</div></li></ul>");
     testFeedback(description);
+    document.getElementById("app").innerHTML = ""
   };
   exports.noteController = noteControllerHtml();
 })(this);

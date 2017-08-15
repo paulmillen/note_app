@@ -59,3 +59,15 @@
   };
   exports.testViewListTextArrayNone = testViewListTextArrayNone();
 })(this);
+
+(function(exports) {
+  function testViewListTextLimit() {
+    var description = "Returns only the first 20 characters of a note's text"
+    var note_1 = { getText: function() { return "This is a test which has more than twenty characters" } };
+    var list = { getItems: function() { return  [note_1] } };
+    var view = new View(list);
+    assert.isTrue(view.listHtml() === "<ul><li><div>This is a test which</div></li></ul>");
+    testFeedback(description);
+  };
+  exports.testViewListTextLimit = testViewListTextLimit();
+})(this);
