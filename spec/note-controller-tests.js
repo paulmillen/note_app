@@ -14,7 +14,7 @@
     var description = "adds HTML to element with id 'app'"
     var list = {
       addItem: function() {},
-      getItems: function() { return [{text: "Test Message"}] }
+      getItems: function() { return [{ getText: function () {return "Test Message"} }] }
     };
     var controller = new Controller(list);
     controller.Html();

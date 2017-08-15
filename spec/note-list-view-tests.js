@@ -12,8 +12,8 @@
 (function(exports) {
   function testViewListTextArray() {
     var description = "Returns an array of each list note's text"
-    var note_1 = { text: "This is a test" }
-    var note_2 = { text: "This is also a test"}
+    var note_1 = { getText: function() { return "This is a test" } };
+    var note_2 = { getText: function() { return "This is also a test"} };
     var list = { getItems: function() { return  [note_1, note_2] } };
     var view = new View(list);
     var returnArray = view._listTextArray();
@@ -27,8 +27,8 @@
 (function(exports) {
   function testViewListTextArrayMultiple() {
     var description = "Returns the list note's text in html - multiple notes"
-    var note_1 = { text: "This is a test" };
-    var note_2 = { text: "This is also a test"};
+    var note_1 = { getText: function() { return "This is a test" } };
+    var note_2 = { getText: function() { return "This is also a test"} };
     var list = { getItems: function() { return  [note_1, note_2] } };
     var view = new View(list);
     assert.isTrue(view.listHtml() === "<ul><li><div>This is a test</div></li><li><div>This is also a test</div></li></ul>");
@@ -40,7 +40,7 @@
 (function(exports) {
   function testViewListTextArraySingle() {
     var description = "Returns the list note's text in html - single note"
-    var note_1 = { text: "This is a test" };
+    var note_1 = { getText: function() { return "This is a test" } };
     var list = { getItems: function() { return  [note_1] } };
     var view = new View(list);
     assert.isTrue(view.listHtml() === "<ul><li><div>This is a test</div></li></ul>");

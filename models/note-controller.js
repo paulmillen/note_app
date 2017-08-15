@@ -10,10 +10,3 @@
   };
   exports.Controller = Controller;
 })(this);
-
-var list = new List;
-var controller = new Controller(list);
-
-window.onload = function() {
-  controller.Html();
-};

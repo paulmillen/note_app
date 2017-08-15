@@ -8,9 +8,9 @@
     var returnArray = [];
     this.listToView
         .getItems()
-        .forEach(function(note) { returnArray.push(note.text) });
+        .forEach(function(note) { returnArray.push(note.getText()) });
     return returnArray;
-  };  
+  };
   View.prototype.listHtml = function() {
     return "<ul><li><div>" + this._listTextArray().join("</div></li><li><div>") + "</div></li></ul>";
   }
