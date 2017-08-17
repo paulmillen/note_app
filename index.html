@@ -19,38 +19,14 @@
     <div id="app">
     </div>
 
+    <form id="text" action="#index" method="post">
+      <textarea name="message" rows="8" cols="80" placeholder="Enter a note..."></textarea>
+      <br>
+      <button type="submit" name="button">Submit</button>
+    </form>
+
     <script type="text/javascript" src="./models/note-controller.js"></script>
     <script type="text/javascript" src="./spec/note-controller-tests.js"></script>
-    <script type="text/javascript">
-
-    list = new List();
-    list.addItem("This is a really long message.  Remember to not use any node frameworks....");
-    list.addItem("This is another long message and aother reminder that Sinatra is better than Express!!!");
-    list.addItem("Buy some milk and stuff for dinner blah blah blah blah blah");
-
-    var noteController = new NoteController(list);
-    noteController.html();
-
-    makeUrlChangeShowNoteForCurrentPage();
-
-    function makeUrlChangeShowNoteForCurrentPage() {
-      window.addEventListener("hashchange", showNoteForCurrentPage);
-    };
-
-    function showNoteForCurrentPage() {
-      showNote(getNoteFromUrl(window.location));
-    };
-
-    function getNoteFromUrl(location) {
-      var id = Number(location.hash.split("/")[1]);
-      return list.getItems()[id].getText();
-    };
-
-    function showNote(note) {
-      document
-        .getElementById("app")
-        .innerHTML = note;
-    };
-    </script>
+    <script type="text/javascript" src="./controller.js"></script>
   </body>
 </html>
