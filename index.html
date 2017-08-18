@@ -15,18 +15,20 @@
     <title>Note</title>
   </head>
   <body>
+    <div class="container">
+      <div id="app">
+      </div>
 
-    <div id="app">
+      <form id="text" action="#" method="post">
+        <textarea id="textarea" rows="5" cols="60" placeholder="Enter a note..."></textarea>
+        <br>
+        <button type="submit" name="button">Submit</button>
+      </form>
     </div>
-
-    <form id="text" action="#" method="post">
-      <textarea name="message" rows="8" cols="80" placeholder="Enter a note..."></textarea>
-      <br>
-      <button type="submit" name="button">Submit</button>
-    </form>
 
     <script type="text/javascript" src="./models/note-controller.js"></script>
     <script type="text/javascript" src="./spec/note-controller-tests.js"></script>
     <script type="text/javascript" src="./controller.js"></script>
+    <link rel="stylesheet" href="./stylesheets/styles.css">
   </body>
 </html>

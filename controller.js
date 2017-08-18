@@ -1,8 +1,6 @@
 var list = new List();
-list.addItem("Test")
 
 var noteController = new NoteController(list);
-noteController.html();
 
 makeUrlChangeShowNoteForCurrentPage();
 stopForm();
@@ -33,6 +31,12 @@ function stopForm() {
 };
 
 function addNewNoteToList(text) {
+  if (text.length === 0) return;
   list.addItem(text);
   noteController.html();
+  resetTextarea();
+};
+
+function resetTextarea() {
+  document.getElementById("textarea").value = "";
 };
