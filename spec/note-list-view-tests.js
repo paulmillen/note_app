@@ -1,3 +1,17 @@
+var note_1 = {
+  getText: function() { return "This is a test" },
+  getId: function() { return 0 }
+};
+var note_2 = {
+  getText: function() { return "This is also a test"},
+  getId: function() { return 1 }
+};
+var note_long = {
+  getText: function() { return "This is a test which has more than twenty characters" },
+  getId: function() { return 0 }
+};
+var list_two_notes = { getItems: function() { return  [note_1, note_2] } };
+
 (function(exports) {
   function testView() {
     var description = 'Takes a list model on instantiation'
@@ -12,16 +26,7 @@
 (function(exports) {
   function testViewListTextArray() {
     var description = "Returns an array of each list note's text"
-    var note_1 = {
-      getText: function() { return "This is a test" },
-      getId: function() { return 0 }
-    };
-    var note_2 = {
-      getText: function() { return "This is also a test"},
-      getId: function() { return 1 }
-    };
-    var list = { getItems: function() { return  [note_1, note_2] } };
-    var view = new View(list);
+    var view = new View(list_two_notes);
     var returnArray = view._listTextArray();
     assert.isTrue(returnArray[0] === "<a href='#note/0'>This is a test</a>");
     assert.isTrue(returnArray[1] === "<a href='#note/1'>This is also a test</a>");
@@ -33,16 +38,7 @@
 (function(exports) {
   function testViewListTextArrayMultiple() {
     var description = "Returns the list note's text in html - multiple notes"
-    var note_1 = {
-      getText: function() { return "This is a test" },
-      getId: function() { return 0 }
-    };
-    var note_2 = {
-      getText: function() { return "This is also a test"},
-      getId: function() { return 1 }
-    };
-    var list = { getItems: function() { return  [note_1, note_2] } };
-    var view = new View(list);
+    var view = new View(list_two_notes);
     assert.isTrue(view.listHtml() === "<ul><li><div><a href='#note/0'>This is a test</a></div></li><li><div><a href='#note/1'>This is also a test</a></div></li></ul>");
     testFeedback(description);
   };
@@ -52,10 +48,6 @@
 (function(exports) {
   function testViewListTextArraySingle() {
     var description = "Returns the list note's text in html - single note"
-    var note_1 = {
-      getText: function() { return "This is a test" },
-      getId: function() { return 0 }
-    };
     var list = { getItems: function() { return  [note_1] } };
     var view = new View(list);
     assert.isTrue(view.listHtml() === "<ul><li><div><a href='#note/0'>This is a test</a></div></li></ul>");
@@ -78,11 +70,7 @@
 (function(exports) {
   function testViewListTextLimit() {
     var description = "Returns only the first 20 characters of a note's text"
-    var note_1 = {
-      getText: function() { return "This is a test which has more than twenty characters" },
-      getId: function() { return 0 }
-    };
-    var list = { getItems: function() { return  [note_1] } };
+    var list = { getItems: function() { return  [note_long] } };
     var view = new View(list);
     assert.isTrue(view.listHtml() === "<ul><li><div><a href='#note/0'>This is a test which</a></div></li></ul>");
     testFeedback(description);
@@ -93,11 +81,7 @@
 (function(exports) {
   function testViewListTextLimit() {
     var description = "Returns only the first 20 characters of a note's text"
-    var note_1 = {
-      getText: function() { return "This is a test which has more than twenty characters" },
-      getId: function() { return 0 }
-     };
-    var list = { getItems: function() { return  [note_1] } };
+    var list = { getItems: function() { return  [note_long] } };
     var view = new View(list);
     assert.isTrue(view.listHtml() === "<ul><li><div><a href='#note/0'>This is a test which</a></div></li></ul>");
     testFeedback(description);

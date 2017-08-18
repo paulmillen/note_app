@@ -1,4 +1,4 @@
-(function(exports) {
+ (function(exports) {
   function noteControllerNew() {
     var description = 'It can be instantiated with a list object'
     var list = { addItem: function() {}, items: [] }

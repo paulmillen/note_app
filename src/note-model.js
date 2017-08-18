@@ -1,7 +1,7 @@
 "use strict";
 
 (function(exports) {
-  var id = -5
+  var id = 0
   function Note(message) {
     this.text = message;
     this.id = id;
