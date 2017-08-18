@@ -16,6 +16,31 @@ textarea {
 	padding: 1em;
 }
 
+button {
+  display: flex;
+  justify-content: center;
+  width: 5em;
+  height: 5em;
+  border-radius: 15px;
+  border-color: #F29FA1;
+  background-color: black;
+  color: white;
+  align-self: flex-end;
+}
+
+button, textarea:focus {
+  outline: none;
+}
+
+.previous {
+  padding-top: 2em;
+}
+
+.fa {
+  margin-top: 0.06em;
+  margin-left: 0.03em;
+}
+
 .container {
   display: flex;
   width: 70%;
