@@ -10,7 +10,7 @@ var note_long = {
   getText: function() { return "This is a test which has more than twenty characters" },
   getId: function() { return 0 }
 };
-var list_two_notes = { getItems: function() { return  [note_1, note_2] } };
+var list_two_notes = { getItems: function() { return [note_1, note_2] } };
 
 (function(exports) {
   function testView() {
@@ -27,9 +27,8 @@ var list_two_notes = { getItems: function() { return  [note_1, note_2] } };
   function testViewListTextArray() {
     var description = "Returns an array of each list note's text"
     var view = new View(list_two_notes);
-    var returnArray = view._listTextArray();
-    assert.isTrue(returnArray[0] === "<a href='#note/0'>This is a test</a>");
-    assert.isTrue(returnArray[1] === "<a href='#note/1'>This is also a test</a>");
+    assert.isTrue(view._listTextArray()[0] === "<a href='#note/0'>This is a test</a>")
+    assert.isTrue(view._listTextArray()[1] === "<a href='#note/1'>This is also a test</a>")
     testFeedback(description);
   };
   exports.testViewListTextArray = testViewListTextArray();
