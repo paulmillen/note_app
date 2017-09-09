@@ -8,7 +8,7 @@
     return this.listToView
         .getItems()
         .map(function(note) {
-          return "<a href='#note/" + note.getId() + "'>" + note.getText().substring(0,20) + "</a>"
+          return "<a href='#note/" + note.getId() + "'>" + note.getText().substring(0,20) + "...</a>"
         });
   };
   View.prototype.listHtml = function() {

@@ -6,23 +6,32 @@
   </head>
   <body>
 
+    <div class="header-container">
+      <span id='header-sub'>please write some</span>
+      <span id='header'>notes</span>
+    </div>
+
     <div class="container">
 
-      <div id="app"></div>
+      <div class="app-container">
 
-      <form id="textform" action="#" method="post">
-        <textarea id="textarea" rows="5" cols="60" placeholder="Note..."></textarea>
-        <br>
-        <button type="submit">
-          <i class="fa fa-plus-square-o fa-4x fa-fw"></i>
-        </button>
-      </form>
+        <div id="app"></div>
 
-      <form id="backbutton" action="" style="display:none;">
-        <button type="button">
-        <i class="fa fa-step-backward fa-4x fa-fw" aria-hidden="true"></i>
-        </button>
-      </form>
+        <form id="textform" action="#" method="post">
+          <textarea id="textarea" rows="5" cols="60" placeholder="Note..."></textarea>
+          <br>
+          <button type="submit">
+            <i class="fa fa-plus-square-o fa-4x fa-fw"></i>
+          </button>
+        </form>
+        
+        <form id="backbutton" action="" style="display:none;">
+          <button type="button">
+          <i class="fa fa-step-backward fa-4x fa-fw" aria-hidden="true"></i>
+          </button>
+        </form>
+
+      </div>
 
     </div>
 

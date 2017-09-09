@@ -18,7 +18,7 @@
     };
     var noteController = new NoteController(list);
     noteController.html();
-    assert.isTrue(document.getElementById("app").innerHTML === '<ul><li><div><a href="#note/0">Test Message</a></div></li></ul>');
+    assert.isTrue(document.getElementById("app").innerHTML === '<ul><li><div><a href="#note/0">Test Message...</a></div></li></ul>');
     testFeedback(description);
     document.getElementById("app").innerHTML = ""
   };
