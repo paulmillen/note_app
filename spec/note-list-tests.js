@@ -6,7 +6,7 @@ var list = new List();
     assert.isTrue(list.items === list.ARRAY);
     testFeedback(description);
   };
-  exports.testListEmptyArray = testListEmptyArray();
+  testListEmptyArray();
 })(this);
 
 (function(exports) {
@@ -17,5 +17,5 @@ var list = new List();
     assert.isTrue(list.items[0].text === "This is a test");
     testFeedback(description);
   };
-  exports.testNewList = testNewList();
+  testNewList();
 })(this);

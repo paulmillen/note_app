@@ -6,7 +6,7 @@
     assert.isTrue(noteController);
     testFeedback(description);
   };
-  exports.noteControllerNew = noteControllerNew();
+  noteControllerNew();
 })(this);
 
 (function(exports) {
@@ -22,5 +22,5 @@
     testFeedback(description);
     document.getElementById("app").innerHTML = ""
   };
-  exports.noteControllerHtml = noteControllerHtml();
+  noteControllerHtml();
 })(this);

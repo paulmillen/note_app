@@ -6,7 +6,7 @@
     assert.isTrue(singleNoteView.note === note);
     testFeedback(description);
   };
-  exports.singleNoteView = singleNoteView();
+  singleNoteView();
 })(this);
 
 (function(exports) {
@@ -17,5 +17,5 @@
     assert.isTrue(singleNoteView.Html() === "<div>This is a test</div>");
     testFeedback(description);
   };
-  exports.singleNoteViewHTML = singleNoteViewHTML();
+  singleNoteViewHTML();
 })(this);

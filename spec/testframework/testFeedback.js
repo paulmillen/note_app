@@ -1,3 +1,3 @@
 function testFeedback(description) {
-  console.log(description + " - passed");
+  console.log(description + "%c - passed", 'color: green');
 };

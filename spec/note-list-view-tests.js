@@ -20,7 +20,7 @@ var list_two_notes = { getItems: function() { return [note_1, note_2] } };
     assert.isTrue(view.listToView === list);
     testFeedback(description);
   };
-  exports.testView = testView();
+  testView();
 })(this);
 
 (function(exports) {
@@ -31,7 +31,7 @@ var list_two_notes = { getItems: function() { return [note_1, note_2] } };
     assert.isTrue(view._listTextArray()[1] === "<a href='#note/1'>This is also a test</a>")
     testFeedback(description);
   };
-  exports.testViewListTextArray = testViewListTextArray();
+  testViewListTextArray();
 })(this);
 
 (function(exports) {
@@ -41,7 +41,7 @@ var list_two_notes = { getItems: function() { return [note_1, note_2] } };
     assert.isTrue(view.listHtml() === "<ul><li><div><a href='#note/0'>This is a test</a></div></li><li><div><a href='#note/1'>This is also a test</a></div></li></ul>");
     testFeedback(description);
   };
-  exports.testViewListTextArrayMultiple = testViewListTextArrayMultiple();
+  testViewListTextArrayMultiple();
 })(this);
 
 (function(exports) {
@@ -52,7 +52,7 @@ var list_two_notes = { getItems: function() { return [note_1, note_2] } };
     assert.isTrue(view.listHtml() === "<ul><li><div><a href='#note/0'>This is a test</a></div></li></ul>");
     testFeedback(description);
   };
-  exports.testViewListTextArraySingle = testViewListTextArraySingle();
+  testViewListTextArraySingle();
 })(this);
 
 (function(exports) {
@@ -63,7 +63,7 @@ var list_two_notes = { getItems: function() { return [note_1, note_2] } };
     assert.isTrue(view.listHtml() === "<ul><li><div></div></li></ul>");
     testFeedback(description);
   };
-  exports.testViewListTextArrayNone = testViewListTextArrayNone();
+  testViewListTextArrayNone();
 })(this);
 
 (function(exports) {
@@ -74,7 +74,7 @@ var list_two_notes = { getItems: function() { return [note_1, note_2] } };
     assert.isTrue(view.listHtml() === "<ul><li><div><a href='#note/0'>This is a test which</a></div></li></ul>");
     testFeedback(description);
   };
-  exports.testViewListTextLimit = testViewListTextLimit();
+  testViewListTextLimit();
 })(this);
 
 (function(exports) {
@@ -85,5 +85,5 @@ var list_two_notes = { getItems: function() { return [note_1, note_2] } };
     assert.isTrue(view.listHtml() === "<ul><li><div><a href='#note/0'>This is a test which</a></div></li></ul>");
     testFeedback(description);
   };
-  exports.testViewListTextLimit = testViewListTextLimit();
+  testViewListTextLimit();
 })(this);

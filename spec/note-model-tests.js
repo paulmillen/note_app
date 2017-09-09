@@ -5,7 +5,7 @@
     assert.isTrue(note.getText() === "This is a test");
     testFeedback(description);
   };
-  exports.testNoteText = testNoteText();
+  testNoteText();
 })(this);
 
 (function(exports) {
@@ -19,5 +19,5 @@
     assert.isTrue(note_3.getId() === 3);
     testFeedback(description);
   };
-  exports.testNoteId = testNoteId();
+  testNoteId();
 })(this);

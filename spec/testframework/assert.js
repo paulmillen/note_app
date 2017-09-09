@@ -1,7 +1,7 @@
 var assert = {
   isTrue: function(assertionToCheck) {
     if (!assertionToCheck) {
-      throw new Error("Assertion failed: assertion is" + assertionToCheck);
+      throw new Error("%c Assertion failed: assertion is" + assertionToCheck, 'color: red');
     }
   }
 };
