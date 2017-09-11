@@ -1,6 +1,6 @@
 ## Note App
 
-A single page app written in ES5.  Project was supported with a testing framework also written in ES5 from scratch.
+A single page app written in ES5 with no libraries of frameworks.  The project was supported with a testing framework also written in ES5 from scratch.
 
 ### Installation
 
